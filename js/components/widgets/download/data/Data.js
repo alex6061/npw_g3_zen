@@ -4,9 +4,11 @@ export const data = {
       content: "Peaceful shopping mindful money",
       priority: 1,
     },
-    text: "See how we can help with making your shopping experience and money management more ZEN.",
+    text: [
+      "See how we can help with making your shopping experience and money management more ZEN.",
+    ],
     links: {
-      google_link: {
+      googleLink: {
         src: "https://play.google.com",
         description: "link to google play",
       },
@@ -16,7 +18,7 @@ export const data = {
       },
     },
     image: {
-      src: "./../../../../../assets/img/download_image.svg",
+      src: "assets/img/1.jpg",
       description: "image for download section",
     },
   },
