@@ -1,27 +1,27 @@
 /**
  * @function Link
  * @typedef {Object}
- * @param {Object} data 
+ * @property {Data} data
+ * @param {Object} url 
  * @param {string} parrentClassName 
  * @param {string} description 
- * @param {string} url 
  * @returns {string} HTML or empty 
  */
 
 export const Link = (url, description, parrentClassName) => {
-  if(!Link) return '';
+  if(!data) return '';
 
-  const { description, url } = data;
+  const { description, url, link } = data;
 
-  const currentClassName = parrentClassName ?
-   `${parrentClassName}__link` :
-    `link`;
+  const currentClassName = parrentClassName 
+    ? `${parrentClassName}__link` 
+    : `link`;
 
   return `
     <a
       class="${currentClassName}"
-      src="${Link.url}"
-      alt="${Link.description}"
+      src="${link.url}"
+      alt="${link.description}"
     >
       ${Link.type === 'google' && IconGoogle()}
       ${Link.type === 'apple' && IconApple()}
