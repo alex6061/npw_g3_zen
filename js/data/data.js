@@ -9,16 +9,16 @@ export const data = {
     ],
     links: {
       googleLink: {
-        src: 'https://play.google.com',
+        url: 'https://play.google.com',
         description: 'google',
       },
       appleLink: {
-        src: 'https://www.apple.com/store',
+        url: 'https://www.apple.com/store',
         description: 'apple',
       },
     },
     image: {
-      src: 'assets/img/1.jpg',
+      url: 'assets/img/1.jpg',
       description: 'image for download section',
     },
   },
