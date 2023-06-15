@@ -8,15 +8,15 @@
  */
 
 export const Title = (data, parrentClassName) => {
-  if(!Title) return '';
+  if(!data) return '';
 
   const { priority, content } = data;
 
-  const currentClassName = parrentClassName ?
-   `${parrentClassName}__title` :
-    'title';
+  const currentClassName = parrentClassName 
+    ? `${parrentClassName}__title`
+    : 'title';
 
-  switch(priority){
+  switch(priority) {
     default: return `<h1 class="${currentClassName}>${content}</h1>"`;
     case 2: return `<h2 class="${currentClassName}>${content}</h2>"`;
     case 3: return `<h3 class="${currentClassName}>${content}</h3>"`;
