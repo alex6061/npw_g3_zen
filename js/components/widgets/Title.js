@@ -1,14 +1,18 @@
 /**
+ * @property {string} priority
+ * @property {string} text
+ */
+
+/**
  * @function Title
  * @typedef {Object} Title
- * @property {string} priority
- * @param {data} data 
+ * @param {Title} data 
  * @param {string} parrentClassName 
  * @returns {string} HTML or empty
  */
 
 export const Title = (data, parrentClassName) => {
-  if(!data) return '';
+  if (!Object.keys(data).length === 2) return '';
 
   const { priority, content } = data;
 
