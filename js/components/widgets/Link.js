@@ -1,17 +1,16 @@
 /**
  * @function Link
- * @typedef {Object}
- * @property {Data} data
- * @param {Object} url 
+ * @typedef {Object} Data
+ * @property {string} type
+ * @property {string} url
+ * @param {Data} data 
  * @param {string} parrentClassName 
- * @param {string} description 
  * @returns {string} HTML or empty 
  */
 
-export const Link = (url, description, parrentClassName) => {
-  if(!data) return '';
-
-  const { description, url, link } = data;
+export const Link = (data, parrentClassName) => {
+  if (!Object.keys(data).length === 2) return '';
+  const { type, link } = data;
 
   const currentClassName = parrentClassName 
     ? `${parrentClassName}__link` 
@@ -20,11 +19,9 @@ export const Link = (url, description, parrentClassName) => {
   return `
     <a
       class="${currentClassName}"
-      src="${link.url}"
-      alt="${link.description}"
+      src="${url}"
     >
-      ${Link.type === 'google' && IconGoogle()}
-      ${Link.type === 'apple' && IconApple()}
+      ${type === 'google' ? IconGoogle() : IconApple()}
     </a>
   `;
 };
