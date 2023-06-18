@@ -1,11 +1,11 @@
 /**
+ * @typedef {Object} Title
  * @property {string} priority
  * @property {string} text
  */
 
 /**
  * @function Title
- * @typedef {Object} Title
  * @param {Title} data 
  * @param {string} parrentClassName 
  * @returns {string} HTML or empty
@@ -20,7 +20,7 @@ export const Title = (data, parrentClassName) => {
     ? `${parrentClassName}__title`
     : 'title';
 
-  switch(priority) {
+  switch (priority) {
     default: return `<h1 class="${currentClassName}">${content}</h1>`;
     case 2: return `<h2 class="${currentClassName}">${content}</h2>`;
     case 3: return `<h3 class="${currentClassName}">${content}</h3>`;
