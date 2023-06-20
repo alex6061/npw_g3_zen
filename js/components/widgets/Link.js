@@ -9,8 +9,8 @@
  */
 
 export const Link = (data, parrentClassName) => {
-  if (!Object.keys(data).length === 2) return "";
-  const { type, link } = data;
+  if (!Object.keys(data).length !== 2) return '';
+  const { type, url } = data;
 
   const currentClassName = parrentClassName
     ? `${parrentClassName}__link`
@@ -21,7 +21,7 @@ export const Link = (data, parrentClassName) => {
       class="${currentClassName}"
       src="${url}"
     >
-      ${type === "google" ? IconGoogle() : IconApple()}
+      ${type === 'google' ? IconGoogle() : IconApple()}
     </a>
   `;
 };
