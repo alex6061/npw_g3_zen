@@ -1,15 +1,18 @@
 /**
- * @function Image
  * @typedef {Object} Data
  * @property {string} type
  * @property {url} type
+ */
+
+/**
+ * @function Image
  * @param {Data} data
  * @param {string} parrentClassName
- * @returns {string} HTML or empty
+ * @return {string} HTML or empty
  */
 
 export const Image = (data, parrentClassName) => {
-  if (!Object.keys(data).length === 2) return '';
+  if (Object.keys(data).length !== 2) return '';
 
   const currentClassName = parrentClassName 
     ? `${parrentClassName}__image` 
@@ -18,7 +21,8 @@ export const Image = (data, parrentClassName) => {
     return `
       <img
         class="${currentClassName}"
-        src="${url}"
+        href="${url}"
+        alt="${description}"
       />
     `;
 };
