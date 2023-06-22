@@ -4,7 +4,7 @@ export const data = {
       content: 'Peaceful shopping mindful money',
       priority: 1,
     },
-    texts: [
+    texts: [ 
       'See how we can help with making your shopping experience and money management more ZEN.',
     ],
     links: {

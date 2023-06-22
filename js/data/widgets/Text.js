@@ -1,0 +1,5 @@
+
+
+const Text = (text, parrentClassName) => {
+  ()
+}
