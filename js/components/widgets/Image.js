@@ -14,7 +14,7 @@
 export const Image = (data, parrentClassName) => {
   if (Object.keys(data).length !== 2) return '';
 
-  const { url } = data
+  const { url, description } = data.links;
 
   const currentClassName = parrentClassName 
     ? `${parrentClassName}__image` 
