@@ -23,7 +23,7 @@ export const Link = (data, parrentClassName) => {
   return `
     <a
       class="${currentClassName}"
-      src="${url}"
+      href="${url}"
     >
       ${type === 'google' ? IconGoogle() : IconApple()}
     </a>
