@@ -20,11 +20,11 @@ export const Image = (data, parrentClassName) => {
     ? `${parrentClassName}__image` 
     : `image`;
 
-    return `
-      <img
-        class="${currentClassName}"
-        src="${url}"
-        alt="${description}"
-      />
-    `;
+  return `
+    <img
+      class="${currentClassName}"
+      src="${url}"
+      alt="${description}"
+    />
+  `;
 };
