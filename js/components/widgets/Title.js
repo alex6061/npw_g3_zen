@@ -1,11 +1,11 @@
 /**
+ * @typedef {Object} Title
  * @property {number} priority
  * @property {string} content
  */
 
 /**
  * @function Title
- * @typedef {Object} Title
  * @param {Title} data 
  * @param {string} parrentClassName 
  * @returns {string} HTML or empty
@@ -29,3 +29,7 @@ export const Title = (data, parrentClassName) => {
     case 6: return `<h6 class="${currentClassName}">${content}</h6>`;
   };
 };
+
+
+console.log()
+
