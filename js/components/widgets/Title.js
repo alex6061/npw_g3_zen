@@ -29,7 +29,3 @@ export const Title = (data, parrentClassName) => {
     case 6: return `<h6 class="${currentClassName}">${content}</h6>`;
   };
 };
-
-
-console.log()
-
