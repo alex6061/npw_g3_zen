@@ -1,6 +1,5 @@
 /**
  * @typedef {Object} text
- * @property  {string} content
  */
 
 /**
@@ -17,9 +16,7 @@ const Text = (texts, parrentClassName) => {
     ? `${parrentClassName}__text` 
     : 'text';
 
-  const { content } = texts;
-
   return `
-    <p class="${currentClassName}">${content}</p>
+    <p class="${currentClassName}">${}</p>
   `;
 };
