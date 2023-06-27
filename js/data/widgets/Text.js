@@ -17,6 +17,8 @@ const Text = (texts, parrentClassName) => {
     : 'text';
 
   return `
-    <p class="${currentClassName}">${}</p>
+    <p class="${currentClassName}">
+      ${Text}
+    </p>
   `;
 };
