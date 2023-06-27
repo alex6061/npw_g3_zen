@@ -4,8 +4,10 @@ export const data = {
       content: 'Peaceful shopping mindful money',
       priority: 1,
     },
-    texts: [ 
-      'See how we can help with making your shopping experience and money management more ZEN.',
+    texts: [
+      {
+       content: 'See how we can help with making your shopping experience and money management more ZEN.'
+      },
     ],
     links: {
       googleLink: {
