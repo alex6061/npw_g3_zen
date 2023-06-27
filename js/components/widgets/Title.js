@@ -14,7 +14,7 @@
 export const Title = (data, parrentClassName) => {
   if (Object.keys(data).length !== 2) return '';
 
-  const { priority, content } = data;
+  const { priority, content } = data.title;
 
   const currentClassName = parrentClassName 
     ? `${parrentClassName}__title`
