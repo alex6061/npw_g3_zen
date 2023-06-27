@@ -1,7 +1,8 @@
 import data from './../data.js';
 
 /**
- * @typedef {Object} text
+ * @typedef {Object} Data
+ * @property {string} type
  */
 
 /**
