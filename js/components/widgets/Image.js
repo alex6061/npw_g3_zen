@@ -17,7 +17,7 @@ export const Image = (data, parrentClassName) => {
   const { url, description } = data.image;
 
   const currentClassName = parrentClassName 
-    ? `${parrentClassName}__image` 
+    ? `${parrentClassName}__image`    
     : `image`;
 
   return `
