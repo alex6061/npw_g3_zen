@@ -1,7 +1,7 @@
 /**
  * @typedef {Object} Data
- * @property {string} type
- * @property {url} type
+ * @property {string} url
+ * @property {string} description
  */
 
 /**
@@ -14,7 +14,7 @@
 export const Image = (data, parrentClassName) => {
   if (Object.keys(data).length !== 2) return '';
 
-  const { image } = data;
+  const { url, description } = data;
 
   const currentClassName = parrentClassName 
     ? `${parrentClassName}__image`    
@@ -23,8 +23,8 @@ export const Image = (data, parrentClassName) => {
   return `
     <img
       class="${currentClassName}"
-      src="${image.url}"
-      alt="${image.description}"
+      src="${url}"
+      alt="${description}"
     />
   `;
 };
