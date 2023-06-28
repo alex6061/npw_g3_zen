@@ -1,19 +1,17 @@
-import data from './../data.js';
-
 /**
  * @typedef {Object} Data
- * @property {string} type
+ * @property {string} text
  */
 
 /**
  * @function Text
- * @param {data} text
+ * @param {Data} text
  * @param {string} parrentClassName 
  * @returns {string} Html or Empty
  */
 
  export const Text = (texts, parrentClassName) => {
-  if(Object.keys(texts) !== 2) return '';
+  if(Object.keys(texts) !== 1) return '';
 
   const currentClassName = parrentClassName 
     ? `${parrentClassName}__text` 
