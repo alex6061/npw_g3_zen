@@ -14,7 +14,7 @@
 export const Image = (data, parrentClassName) => {
   if (Object.keys(data).length !== 2) return '';
 
-  const { url, description } = data.image;
+  const { image } = data;
 
   const currentClassName = parrentClassName 
     ? `${parrentClassName}__image`    
@@ -23,8 +23,8 @@ export const Image = (data, parrentClassName) => {
   return `
     <img
       class="${currentClassName}"
-      src="${url}"
-      alt="${description}"
+      src="${image.url}"
+      alt="${image.description}"
     />
   `;
 };
