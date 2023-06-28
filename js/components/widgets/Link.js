@@ -1,6 +1,5 @@
 /**
  * @typedef {Object} Data
- * @property {string} type
  * @property {string} url
  */
 
@@ -13,9 +12,9 @@
 
 
 export const Link = (data, parrentClassName) => {
-  if (Object.keys(data).length !== 2) return '';
+  if (Object.keys(data).length !== 1) return '';
 
-  const {type, url, link} = data;
+  const { url } = data;
 
   const currentClassName = parrentClassName
     ? `${parrentClassName}__link`
