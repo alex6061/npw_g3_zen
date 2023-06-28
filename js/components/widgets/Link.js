@@ -15,7 +15,7 @@
 export const Link = (data, parrentClassName) => {
   if (Object.keys(data).length !== 2) return '';
 
-  const {type, url} = data.links;
+  const {type, url, link} = data;
 
   const currentClassName = parrentClassName
     ? `${parrentClassName}__link`
