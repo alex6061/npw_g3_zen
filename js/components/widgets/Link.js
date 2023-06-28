@@ -11,6 +11,7 @@
  * @returns {string} HTML or empty
  */
 
+
 export const Link = (data, parrentClassName) => {
   if (Object.keys(data).length !== 2) return '';
 
