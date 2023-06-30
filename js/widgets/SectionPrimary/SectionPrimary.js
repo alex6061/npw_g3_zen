@@ -2,8 +2,9 @@ import {Title} from './../../' // доделать
 import {Text} from './../../'  // доделать
 import {Image} from './../../'  // доделать
 import {BrandLink} from './../../'  // доделать
+import {Link} from '...//...//./' // доделать
 
-/**@typedef {import('../../Schema/Schema.ts').SectionPrimaty} Data */
+/**@typedef {import('../../../_temp/Schema/Title.types').SectionPrimaty} Data */
 
 /**
  * @function SectionPrimary
@@ -27,7 +28,7 @@ export const SectionPrimary = (data) => {
       ${title ? Title(className) : ''}
       ${texts.length > 0 ? texts.map((text) => Text(text, className)).join('') : ''} 
       ${image ? Image(image) : ''}
-      ${links.length > 0 ? links.map((link, className)).join('') : ''}
+      ${links.length > 0 ? links.map((link) => Link(link, className)).join('') : ''}
     </section>
   `;
 
