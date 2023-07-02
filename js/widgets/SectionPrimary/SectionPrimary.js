@@ -11,7 +11,7 @@ import{Link} from './../../components/Link/Link.js'
  */
 
 
-const SectionPrimary = (data) => {
+export const SectionPrimary = (data) => {
   const dataKeys = Object.keys(data);
 
   if(dataKeys.length !== 4 || dataKeys.length !== 5) return '';
@@ -29,5 +29,5 @@ const SectionPrimary = (data) => {
       ${image ? Image(image, className)  : ''}
       ${links.length > 0 ? links.map((link) => Link(link, className)).join('') : ''}
     </section>
-  `
-}
+  `;
+};
