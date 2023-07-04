@@ -5,14 +5,14 @@ export const data = {
       priority: 1,
     },
     texts: [
-      'See how we can help with making your shopping experience and money management more ZEN.',
+       'See how we can help with making your shopping experience and money management more ZEN.'
     ],
     links: {
-      googleLink: {
+      google: {
         url: 'https://play.google.com',
         description: 'google',
       },
-      appleLink: {
+      apple: {
         url: 'https://www.apple.com/store',
         description: 'apple',
       },
