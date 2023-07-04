@@ -6,7 +6,7 @@
  */
 
  export const Text = (text, parrentClassName) => {
-  if (text) return '';
+  if (!text) return '';
 
   const currentClassName = parrentClassName 
     ? `${parrentClassName}__text` 
@@ -14,7 +14,7 @@
     
     return `
       <p class="${currentClassName}">
-        ${text.length > 0 ? text.map(t => Text(t, className)).join('') : ''}
+        ${text}
       </p>
   `;
 }
