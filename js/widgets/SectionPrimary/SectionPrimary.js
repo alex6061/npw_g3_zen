@@ -24,7 +24,7 @@ export const SectionPrimary = (data) => {
 
   return `
     <section class="${className}">
-      ${title ? title(title, className) : ''}
+      ${title ? Title(title, className) : ''}
       ${texts.length > 0 ? texts.map((text) => Text(text,className)).join('') : ''}
       ${image ? Image(image, className)  : ''}
       ${links.length > 0 ? links.map((link) => Link(link, className)).join('') : ''}
