@@ -1,6 +1,5 @@
 import{Title} from './../../components/Title/Title.js'
 import{Link} from './../../components/Link/Link.js'
-// import{Image} from './../../components/Image/Image.js' доделать
 
 /**@typedef {import('./SectionPrimary.types').SectionPrimaty} Data  */
 
@@ -10,13 +9,15 @@ import{Link} from './../../components/Link/Link.js'
  * @returns {string} 
  */
 
-
 export const SectionPrimary = (data) => {
+
   const dataKeys = Object.keys(data);
 
-  if(dataKeys.length !== 4 || dataKeys.length !== 5) return '';
+  if (dataKeys.length !== 4 && dataKeys.length !== 5) return '';
 
-  const{name, title, texts, links, image} = data;
+  const{ name, title, links } = data;
+
+  const { appleLink, googleLink } = links;
 
   const className = name
     ? name
@@ -25,9 +26,8 @@ export const SectionPrimary = (data) => {
   return `
     <section class="${className}">
       ${title ? Title(title, className) : ''}
-      ${texts.length > 0 ? texts.map((text) => Text(text,className)).join('') : ''}
-      ${image ? Image(image, className)  : ''}
-      ${links.length > 0 ? links.map((link) => Link(link, className)).join('') : ''}
+      ${appleLink ? Link(appleLink) : ''}
+      ${googleLink ? Link(googleLink) : ''}
     </section>
   `;
 };
