@@ -1,17 +1,12 @@
 /**
- * @typedef {Object} Data
- * @property {string} text
- */
-
-/**
  * @function Text
- * @param {Data} text
+ * @param {string} texts
  * @param {string} parrentClassName 
  * @returns {string} Html or Empty
  */
 
  export const Text = (texts, parrentClassName) => {
-  if(Object.keys(texts) !== 1) return '';
+  if (texts) return '';
 
   const currentClassName = parrentClassName 
     ? `${parrentClassName}__text` 
