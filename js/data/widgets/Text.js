@@ -1,12 +1,12 @@
 /**
  * @function Text
- * @param {string} texts
+ * @param {string} text
  * @param {string} parrentClassName 
  * @returns {string} Html or Empty
  */
 
- export const Text = (texts, parrentClassName) => {
-  if (texts) return '';
+ export const Text = (text, parrentClassName) => {
+  if (text) return '';
 
   const currentClassName = parrentClassName 
     ? `${parrentClassName}__text` 
@@ -14,7 +14,7 @@
     
     return `
       <p class="${currentClassName}">
-        ${texts.length > 0 ? texts.map((text) => Text(text, className)).join('') : ''}
+        ${text.length > 0 ? text.map(t => Text(t, className)).join('') : ''}
       </p>
   `;
 }
