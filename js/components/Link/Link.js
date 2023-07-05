@@ -1,7 +1,4 @@
-/**
- * @typedef {Object} Data
- * @property {string} url
- */
+/**@typedef {import('./Link.types.ts').Link} Data*/
 
 /**
  * @function Link
@@ -10,11 +7,10 @@
  * @returns {string} HTML or empty
  */
 
-
 export const Link = (data, parrentClassName) => {
-  if (Object.keys(data).length !== 1) return '';
+  if (Object.keys(data).length !== 2) return '';
 
-  const { url } = data;
+  const { url, description } = data;
 
   const currentClassName = parrentClassName
     ? `${parrentClassName}__link`
@@ -25,7 +21,7 @@ export const Link = (data, parrentClassName) => {
       class="${currentClassName}"
       href="${url}"
     >
-      ${type === 'google' ? IconGoogle() : IconApple()}
+      ${description === 'google' ? 'icon Google' : 'icon Apple'}
     </a>
   `;
 };
