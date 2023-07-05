@@ -2,7 +2,7 @@ import { data } from './src/js/components/data.js';
 import { Text } from './src/js/components/Text.js';
 import { Title } from './src/js/components/Title.js';
 import { Image } from './src/js/components/Image.js';
-
+ 
 const { download,
   warranty,
   care,
