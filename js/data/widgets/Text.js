@@ -1,4 +1,9 @@
 /**
+ * @typedef {Object} text
+ * @property  {string} content
+ */
+
+/**
  * @function Text
  * @param {string} text
  * @param {string} parrentClassName 
@@ -11,10 +16,10 @@
   const currentClassName = parrentClassName 
     ? `${parrentClassName}__text` 
     : 'text';
-    
-    return `
-      <p class="${currentClassName}">
-        ${text}
-      </p>
+
+  const { content } = text;
+
+  return `
+    <p class="${currentClassName}">${text}</p>
   `;
 }

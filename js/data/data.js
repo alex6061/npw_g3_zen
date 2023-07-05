@@ -5,13 +5,7 @@ export const data = {
       priority: 1,
     },
     texts: [
-<<<<<<< HEAD
        'See how we can help with making your shopping experience and money management more ZEN.'
-=======
-      {
-       content: 'See how we can help with making your shopping experience and money management more ZEN.'
-      },
->>>>>>> 345cb7b (WIP)
     ],
     links: {
       google: {
